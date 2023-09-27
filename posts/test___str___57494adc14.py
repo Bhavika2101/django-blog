@@ -17,7 +17,7 @@ class TestGetHitCount(unittest.TestCase):
         saved_hit_count = HitCount.objects.get(ip="8bbc39393")
         # Test if the IP matches the expected value
         print(saved_hit_count.ip)
-        # self.assertEqual(saved_hit_count.ip, "8bbc39393b")
+        self.assertEqual(saved_hit_count.ip, "8bbc39393")
     def test_hit_count_default(self):
         # Create a new HitCount instance without specifying IP
         hit_count = HitCount()
